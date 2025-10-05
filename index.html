@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mobile Tire & Auto Repair | 上门换胎维修服务</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      border-bottom: 1px solid #ddd;
+    }
+    header h1 {
+      font-size: 1.2rem;
+      margin: 0;
+    }
+    .lang-switch {
+      cursor: pointer;
+      color: #007BFF;
+    }
+    section {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+    h2 {
+      border-left: 4px solid #007BFF;
+      padding-left: 8px;
+    }
+    .service {
+      margin: 1rem 0;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      border-top: 1px solid #ddd;
+      color: #666;
+    }
+    button {
+      background: #007BFF;
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 id="title">Mobile Tire & Auto Repair | 上门换胎维修服务</h1>
+    <div class="lang-switch" id="langToggle">中文</div>
+  </header>
+
+  <section id="home">
+    <h2 id="intro-title">Mobile Tire & Auto Repair</h2>
+    <p id="intro-text">Professional on-site tire change and repair service. Fast, reliable, and convenient at your location.</p>
+  </section>
+
+  <section id="services">
+    <h2 id="service-title">Services</h2>
+    <div class="service">
+      <strong id="s1">Mobile Tire Change</strong> - Fast and safe tire replacement at your location.
+    </div>
+    <div class="service">
+      <strong id="s2">Battery Boost</strong> - Get your car started anytime, anywhere.
+    </div>
+    <div class="service">
+      <strong id="s3">Brake Replacement</strong> - Quality brake service to keep you safe.
+    </div>
+    <div class="service">
+      <strong id="s4">Basic Repairs</strong> - Quick fixes for common issues.
+    </div>
+  </section>
+
+  <section id="about">
+    <h2 id="about-title">About Me</h2>
+    <p id="about-text">Hi, I'm Vinny – Red Seal certified automotive technician with years of experience in mobile tire and auto repair. I provide honest and efficient service wherever you are.</p>
+  </section>
+
+  <section id="contact">
+    <h2 id="contact-title">Contact</h2>
+    <p id="contact-text">📞 Phone: (204) 555-1234<br>📧 Email: vinnyauto@example.com<br>📸 Instagram: @vinnyauto</p>
+    <button onclick="window.open('https://wa.me/12045551234','_blank')" id="btn-book">Book Now</button>
+  </section>
+
+  <footer>
+    <p id="footer-text">© 2025 Vinny Mobile Auto. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const langToggle = document.getElementById('langToggle');
+    let currentLang = 'en';
+
+    const text = {
+      en: {
+        title: 'Mobile Tire & Auto Repair | 上门换胎维修服务',
+        introTitle: 'Mobile Tire & Auto Repair',
+        introText: 'Professional on-site tire change and repair service. Fast, reliable, and convenient at your location.',
+        serviceTitle: 'Services',
+        s1: 'Mobile Tire Change',
+        s2: 'Battery Boost',
+        s3: 'Brake Replacement',
+        s4: 'Basic Repairs',
+        aboutTitle: 'About Me',
+        aboutText: "Hi, I'm Vinny – Red Seal certified automotive technician with years of experience in mobile tire and auto repair. I provide honest and efficient service wherever you are.",
+        contactTitle: 'Contact',
+        contactText: '📞 Phone: (204) 555-1234\n📧 Email: vinnyauto@example.com\n📸 Instagram: @vinnyauto',
+        btnBook: 'Book Now',
+        footerText: '© 2025 Vinny Mobile Auto. All rights reserved.',
+        toggle: '中文'
+      },
+      zh: {
+        title: '上门换胎维修服务 | Mobile Tire & Auto Repair',
+        introTitle: '上门换胎与汽车维修',
+        introText: '专业上门换胎与维修服务，快速、可靠、方便。',
+        serviceTitle: '服务内容',
+        s1: '上门换胎',
+        s2: '搭电救援',
+        s3: '刹车更换',
+        s4: '基础维修',
+        aboutTitle: '关于我',
+        aboutText: '你好，我是文西，一名 Red Seal 汽车技师，拥有多年上门维修与换胎经验，提供诚实高效的服务。',
+        contactTitle: '联系方式',
+        contactText: '📞 电话: (204) 555-1234\n📧 邮箱: vinnyauto@example.com\n📸 Instagram: @vinnyauto',
+        btnBook: '立即预约',
+        footerText: '© 2025 文西上门维修 版权所有',
+        toggle: 'EN'
+      }
+    };
+
+    langToggle.addEventListener('click', () => {
+      currentLang = currentLang === 'en' ? 'zh' : 'en';
+      const t = text[currentLang];
+      document.getElementById('title').textContent = t.title;
+      document.getElementById('intro-title').textContent = t.introTitle;
+      document.getElementById('intro-text').textContent = t.introText;
+      document.getElementById('service-title').textContent = t.serviceTitle;
+      document.getElementById('s1').textContent = t.s1;
+      document.getElementById('s2').textContent = t.s2;
+      document.getElementById('s3').textContent = t.s3;
+      document.getElementById('s4').textContent = t.s4;
+      document.getElementById('about-title').textContent = t.aboutTitle;
+      document.getElementById('about-text').textContent = t.aboutText;
+      document.getElementById('contact-title').textContent = t.contactTitle;
+      document.getElementById('contact-text').innerHTML = t.contactText.replace(/\n/g, '<br>');
+      document.getElementById('btn-book').textContent = t.btnBook;
+      document.getElementById('footer-text').textContent = t.footerText;
+      langToggle.textContent = t.toggle;
+    });
+  </script>
+</body>
+</html>
